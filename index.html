@@ -1,312 +1,155 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forex Robot - Automate Your Trading 24/7</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }<br/>
-        body { font-family: 'Poppins', sans-serif; background: #0b0e1a; color: #e0e6ed; line-height: 1.6; }<br/>
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        /* Hero */
-        .hero { padding: 80px 0 60px; text-align: center; background: linear-gradient(135deg, #0b0e1a 0%, #1a1f33 100%); }<br/>
-        .hero h1 { font-size: 3rem; font-weight: 800; background: linear-gradient(90deg, #00d4ff, #00ff88); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 20px; }<br/>
-        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; color: #a0a8b8; }<br/>
-        .cta-btn { display: inline-block; background: linear-gradient(90deg, #00d4ff, #00ff88); color: #0b0e1a; padding: 15px 40px; border-radius: 50px; font-weight: 700; font-size: 1.1rem; text-decoration: none; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 0 20px rgba(0,212,255,0.4); }<br/>
-        .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 0 30px rgba(0,212,255,0.6); }<br/>
-        .stats { display: flex; justify-content: center; gap: 40px; margin-top: 40px; flex-wrap: wrap; }<br/>
-        .stat-item { text-align: center; }<br/>
-        .stat-item span { display: block; font-size: 1rem; color: #00d4ff; font-weight: 600; }<br/>
-        .stat-item .icon { font-size: 2rem; }
-        /* Features */
-        .features { padding: 60px 0; background: #121726; }<br/>
-        .features h2 { text-align: center; font-size: 2.2rem; font-weight: 700; margin-bottom: 50px; }<br/>
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }<br/>
-        .feature-card { background: #1a2035; border-radius: 15px; padding: 30px; text-align: center; transition: transform 0.3s; border: 1px solid #2a3050; }<br/>
-        .feature-card:hover { transform: translateY(-5px); border-color: #00d4ff; }<br/>
-        .feature-card .icon { font-size: 3rem; margin-bottom: 15px; }<br/>
-        .feature-card h3 { font-size: 1.3rem; font-weight: 600; margin-bottom: 10px; }<br/>
-        .feature-card p { font-size: 0.95rem; color: #a0a8b8; }
-        /* Benefits */
-        .benefits { padding: 60px 0; background: #0b0e1a; }<br/>
-        .benefits h2 { text-align: center; font-size: 2.2rem; font-weight: 700; margin-bottom: 50px; }<br/>
-        .benefits-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 900px; margin: 0 auto; }<br/>
-        .benefit-item { background: #1a2035; padding: 20px; border-radius: 10px; border-left: 4px solid #00d4ff; }<br/>
-        .benefit-item h4 { font-weight: 600; margin-bottom: 5px; }<br/>
-        .benefit-item p { color: #a0a8b8; font-size: 0.9rem; }
-        /* Pricing */
-        .pricing { padding: 60px 0; background: #121726; text-align: center; }<br/>
-        .pricing h2 { font-size: 2.2rem; font-weight: 700; margin-bottom: 10px; }<br/>
-        .pricing .subtitle { color: #a0a8b8; margin-bottom: 40px; }<br/>
-        .pricing-card { background: linear-gradient(135deg, #1a2035, #1f2a4a); border-radius: 20px; padding: 40px; max-width: 400px; margin: 0 auto; border: 2px solid #00d4ff; position: relative; }<br/>
-        .pricing-card .price { font-size: 3rem; font-weight: 800; color: #00ff88; }<br/>
-        .pricing-card .period { font-size: 1.2rem; color: #a0a8b8; }<br/>
-        .pricing-card ul { list-style: none; margin: 30px 0; text-align: left; }<br/>
-        .pricing-card ul li { padding: 8px 0; font-size: 1rem; }<br/>
-        .pricing-card ul li::before { content: '✔️ '; color: #00ff88; }<br/>
-        .pricing-card .cta-btn { margin-top: 20px; }<br/>
-        .payment-methods { display: flex; justify-content: center; gap: 30px; margin-top: 30px; flex-wrap: wrap; }<br/>
-        .payment-methods img { height: 40px; filter: brightness(0) invert(1); }
-        /* Bonuses */
-        .bonuses { padding: 60px 0; background: #0b0e1a; text-align: center; }<br/>
-        .bonuses h2 { font-size: 2.2rem; font-weight: 700; margin-bottom: 40px; }<br/>
-        .bonus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; max-width: 800px; margin: 0 auto; }<br/>
-        .bonus-item { background: #1a2035; padding: 30px; border-radius: 15px; border: 1px solid #2a3050; }<br/>
-        .bonus-item .icon { font-size: 2.5rem; margin-bottom: 10px; }<br/>
-        .bonus-item h4 { font-weight: 600; }
-        /* Social Proof */
-        .social-proof { padding: 60px 0; background: #121726; text-align: center; }<br/>
-        .social-proof h2 { font-size: 2.2rem; font-weight: 700; margin-bottom: 40px; }<br/>
-        .testimonial { max-width: 600px; margin: 0 auto 30px; background: #1a2035; padding: 30px; border-radius: 15px; }<br/>
-        .testimonial p { font-style: italic; color: #c0c8d8; }<br/>
-        .testimonial .author { margin-top: 15px; font-weight: 600; color: #00d4ff; }<br/>
-        .stats-numbers { display: flex; justify-content: center; gap: 50px; margin-top: 40px; flex-wrap: wrap; }<br/>
-        .stat-number { font-size: 2rem; font-weight: 800; color: #00ff88; }<br/>
-        .stat-label { color: #a0a8b8; }
-        /* FAQ */
-        .faq { padding: 60px 0; background: #0b0e1a; }<br/>
-        .faq h2 { text-align: center; font-size: 2.2rem; font-weight: 700; margin-bottom: 40px; }<br/>
-        .faq-item { background: #1a2035; margin-bottom: 15px; border-radius: 10px; padding: 20px; }<br/>
-        .faq-item h4 { font-weight: 600; cursor: pointer; }<br/>
-        .faq-item p { margin-top: 10px; color: #a0a8b8; display: none; }<br/>
-        .faq-item.active p { display: block; }
-        /* Final CTA */
-        .final-cta { padding: 80px 0; background: linear-gradient(135deg, #121726, #1a2035); text-align: center; }<br/>
-        .final-cta h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 20px; }<br/>
-        .final-cta p { font-size: 1.2rem; color: #a0a8b8; margin-bottom: 30px; }<br/>
-        .final-cta .cta-btn { font-size: 1.3rem; padding: 18px 50px; }
-        /* Risk Disclaimer */
-        .disclaimer { padding: 30px 0; background: #0b0e1a; text-align: center; font-size: 0.8rem; color: #6a7280; }<br/>
-        .disclaimer p { max-width: 800px; margin: 0 auto; }
-        /* Footer */
-        footer { padding: 40px 0; background: #121726; text-align: center; }<br/>
-        footer .social-links a { color: #a0a8b8; margin: 0 15px; text-decoration: none; font-size: 1.2rem; transition: color 0.3s; }<br/>
-        footer .social-links a:hover { color: #00d4ff; }
-        /* Responsive */
-        @media (max-width: 768px) {<br/>
-            .hero h1 { font-size: 2rem; }<br/>
-            .stats { gap: 20px; }<br/>
-            .pricing-card { margin: 0 20px; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secret EA — Lifetime Access</title>
+  <meta name="description" content="Get lifetime access to Secret EA, presets, VIP support and signal room access. Works with MT4 and MT5." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Meta Pixel from original page -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','824197712585919');
+    fbq('track','PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=824197712585919&ev=PageView&noscript=1" /></noscript>
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--gold:#c9a84c;--gold2:#f1d57a;--bg:#07090d;--bg2:#0d1117;--card:#141a24;--text:#f1f1f1;--muted:#8b95a6;--border:rgba(255,255,255,.08);--green:#40d17d}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:radial-gradient(circle at 50% 0%,rgba(201,168,76,.15),transparent 36%),var(--bg);color:var(--text);overflow-x:hidden}
+    body::before{content:"";position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:-1}
+    a{text-decoration:none;color:inherit}
+    .topbar{position:sticky;top:0;z-index:50;background:rgba(7,9,13,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+    .topbar-inner{max-width:1120px;margin:auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:2px;color:var(--gold)}
+    .mini-btn{background:rgba(201,168,76,.14);border:1px solid rgba(201,168,76,.34);padding:10px 17px;border-radius:999px;color:var(--gold2);font-weight:700;font-size:13px;white-space:nowrap}
+    .hero{min-height:92vh;display:flex;align-items:center;justify-content:center;padding:76px 22px 44px;text-align:center;position:relative}
+    .hero-inner{max-width:980px;margin:auto}
+    .badge{display:inline-flex;gap:9px;align-items:center;background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.32);color:var(--gold2);padding:9px 16px;border-radius:999px;font-size:13px;font-weight:700;margin-bottom:22px}
+    h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,10vw,112px);line-height:.9;letter-spacing:2px;margin-bottom:22px}
+    h1 span{background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:200%;animation:shine 3.5s linear infinite}
+    @keyframes shine{to{background-position:200%}}
+    .subtitle{max-width:720px;margin:0 auto 34px;color:var(--muted);font-size:clamp(16px,2.2vw,20px);line-height:1.65}
+    .cta-row{display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;margin:30px 0 16px}
+    .btn-main{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,var(--gold),#9a6f28,var(--gold2));color:#07090d;border:0;border-radius:10px;padding:19px 34px;font-size:17px;font-weight:800;box-shadow:0 12px 55px rgba(201,168,76,.35);transition:.25s;min-width:260px}
+    .btn-main:hover{transform:translateY(-4px);box-shadow:0 18px 70px rgba(201,168,76,.5)}
+    .btn-secondary{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--border);background:rgba(255,255,255,.04);border-radius:10px;padding:18px 26px;color:var(--text);font-weight:700;min-width:220px}
+    .trust{font-size:12px;color:var(--muted);margin-top:12px}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:760px;margin:46px auto 0}
+    .stat{background:rgba(255,255,255,.035);border:1px solid var(--border);border-radius:16px;padding:19px 14px}
+    .stat strong{display:block;font-family:'Bebas Neue',sans-serif;font-size:34px;color:var(--gold2);line-height:1}.stat span{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:1.4px}
+    section{padding:82px 22px}.inner{max-width:1120px;margin:auto}.label{text-align:center;color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:800;margin-bottom:12px}.title{font-family:'Bebas Neue',sans-serif;font-size:clamp(38px,6vw,68px);text-align:center;line-height:1;margin-bottom:16px}.desc{text-align:center;max-width:650px;margin:0 auto 48px;color:var(--muted);line-height:1.75}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:18px}.card{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02));border:1px solid var(--border);border-radius:18px;padding:28px;transition:.25s}.card:hover{transform:translateY(-6px);border-color:rgba(201,168,76,.35)}.icon{width:48px;height:48px;border-radius:14px;background:rgba(201,168,76,.14);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:16px}.card h3{font-size:18px;margin-bottom:10px}.card p,.card li{color:var(--muted);font-size:14px;line-height:1.7}.card ul{list-style:none;display:grid;gap:8px}.card li::before{content:'✓';color:var(--green);font-weight:800;margin-right:9px}
+    .offer{background:linear-gradient(180deg,var(--bg),var(--bg2),var(--bg));border-block:1px solid var(--border)}
+    .price-card{max-width:760px;margin:auto;background:linear-gradient(180deg,rgba(201,168,76,.13),rgba(255,255,255,.035));border:1px solid rgba(201,168,76,.28);border-radius:24px;padding:38px;box-shadow:0 20px 90px rgba(0,0,0,.35);position:relative;overflow:hidden}.price-card::before{content:'BEST VALUE';position:absolute;right:24px;top:22px;border:1px solid rgba(201,168,76,.4);border-radius:999px;padding:7px 12px;color:var(--gold2);font-size:11px;font-weight:900;letter-spacing:1.4px}.price-title{font-family:'Bebas Neue',sans-serif;font-size:45px;color:var(--gold2);margin-bottom:8px}.price{font-family:'Bebas Neue',sans-serif;font-size:72px;line-height:1;margin:10px 0}.price small{font-family:'DM Sans';font-size:15px;color:var(--muted);font-weight:500}.included{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:28px 0}.included div{background:rgba(0,0,0,.18);border:1px solid var(--border);border-radius:12px;padding:13px 14px;color:#dfe3ea;font-size:14px}.included div::before{content:'✓';color:var(--green);font-weight:900;margin-right:8px}.safe{font-size:12px;color:var(--muted);line-height:1.7;margin-top:16px}
+    .steps{counter-reset:step;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}.step{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:26px}.step::before{counter-increment:step;content:counter(step);display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--gold);color:#07090d;font-weight:900;margin-bottom:16px}.step h3{margin-bottom:8px}.step p{color:var(--muted);line-height:1.7;font-size:14px}
+    .faq{max-width:850px;margin:auto;display:grid;gap:12px}.faq details{background:rgba(255,255,255,.035);border:1px solid var(--border);border-radius:14px;padding:18px 20px}.faq summary{cursor:pointer;font-weight:800}.faq p{color:var(--muted);margin-top:12px;line-height:1.7;font-size:14px}
+    footer{border-top:1px solid var(--border);padding:32px 22px;text-align:center;color:var(--muted);font-size:12px;line-height:1.8}.disclaimer{max-width:890px;margin:32px auto 0;background:rgba(255,255,255,.025);border:1px solid var(--border);border-radius:14px;padding:18px;color:var(--muted);font-size:12px;line-height:1.75;text-align:center}
+    @media(max-width:680px){.stats{grid-template-columns:1fr}.price-card{padding:28px 20px}.price-card::before{position:static;display:inline-block;margin-bottom:16px}.price{font-size:58px}.topbar-inner{padding-inline:14px}.brand{font-size:24px}.mini-btn{font-size:12px;padding:9px 12px}}
+  </style>
 </head>
 <body>
-    <!-- Hero -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top">SECRET EA</a>
+      <a class="mini-btn" href="https://go.centerpag.com/PPU38CQCA1R" target="_blank" rel="noopener" onclick="fbq('track','InitiateCheckout')">Buy Lifetime Access</a>
+    </div>
+  </div>
+
+  <main id="top">
     <section class="hero">
-        <div class="container">
-            <h1>🤖 Automate Your Forex Trading 24/7</h1>
-            <p>Trade with precision using our advanced Expert Advisor. No emotions, no stress – just consistent profits.</p>
-            <a href="https://go.centerpag.com/PPU38CQCA1R" class="cta-btn">Get Lifetime Access Now 🔥</a>
-            <div class="stats">
-                <div class="stat-item"><span class="icon">💻</span><span>MT4 Compatible</span></div>
-                <div class="stat-item"><span class="icon">📱</span><span>MT5 Compatible</span></div>
-                <div class="stat-item"><span class="icon">⏰</span><span>24/7 Automated</span></div>
-                <div class="stat-item"><span class="icon">🔒</span><span>Lifetime Access</span></div>
-            </div>
+      <div class="hero-inner">
+        <div class="badge">🔥 Lifetime Access • MT4 & MT5 • VIP Presets</div>
+        <h1>Automate Your Trading With <span>Secret EA</span></h1>
+        <p class="subtitle">Get access to the Forex trading robot, ready-to-use presets, VIP support and signal room access. Built for traders who want automation, structure and faster execution inside MetaTrader.</p>
+        <div class="cta-row">
+          <a class="btn-main" href="https://go.centerpag.com/PPU38CQCA1R" target="_blank" rel="noopener" onclick="fbq('track','InitiateCheckout')">💳 Buy Now — Checkout</a>
+          <a class="btn-secondary" href="#offer">See What’s Included</a>
         </div>
+        <p class="trust">Instant checkout. After payment, contact support with your payment proof to receive access.</p>
+        <div class="stats">
+          <div class="stat"><strong>MT4/MT5</strong><span>Compatible</span></div>
+          <div class="stat"><strong>VIP</strong><span>Presets Included</span></div>
+          <div class="stat"><strong>24/7</strong><span>Automation Ready</span></div>
+        </div>
+      </div>
     </section>
 
-    <!-- Why Choose Us -->
-    <section class="features">
-        <div class="container">
-            <h2>Why Choose Our Robot?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="icon">⚙️</div>
-                    <h3>100% Automated</h3>
-                    <p>Set it and forget it. Our EA trades for you around the clock.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon">🛡️</div>
-                    <h3>Risk Control</h3>
-                    <p>Advanced money management and stop-loss protection built-in.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon">📊</div>
-                    <h3>Verified Results</h3>
-                    <p>Backtested and live-verified with consistent monthly returns.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon">🔄</div>
-                    <h3>MT4 & MT5</h3>
-                    <p>Works seamlessly on both MetaTrader 4 and MetaTrader 5.</p>
-                </div>
-            </div>
+    <section>
+      <div class="inner">
+        <div class="label">Why Secret EA</div>
+        <h2 class="title">Designed For Automated Trading</h2>
+        <p class="desc">Secret EA helps automate entries, exits and trade management using predefined settings. You receive the robot plus presets so you can start testing and configuring your setup faster.</p>
+        <div class="grid">
+          <div class="card"><div class="icon">🤖</div><h3>Fully Automated EA</h3><p>Runs inside MetaTrader and executes trades based on the strategy settings and presets you choose.</p></div>
+          <div class="card"><div class="icon">⚙️</div><h3>Ready-To-Use Presets</h3><p>Get access to VIP presets for different assets and styles, including safer and more aggressive configurations.</p></div>
+          <div class="card"><div class="icon">📈</div><h3>Forex, Gold & Crypto</h3><p>Built for markets like Forex pairs, XAUUSD and BTCUSD depending on the preset and broker conditions.</p></div>
+          <div class="card"><div class="icon">🛡️</div><h3>Risk Management Tools</h3><p>Use predefined parameters, lot settings and risk controls. Results always depend on market conditions and setup.</p></div>
         </div>
+      </div>
     </section>
 
-    <!-- What You Get -->
-    <section class="benefits">
-        <div class="container">
-            <h2>📦 What You Get</h2>
-            <div class="benefits-list">
-                <div class="benefit-item">
-                    <h4>🚀 Lifetime Access</h4>
-                    <p>One payment, forever access. No subscriptions, no hidden fees.</p>
-                </div>
-                <div class="benefit-item">
-                    <h4>🔄 Lifetime Updates</h4>
-                    <p>Free updates for life – we constantly improve the algorithm.</p>
-                </div>
-                <div class="benefit-item">
-                    <h4>🎧 Priority Support</h4>
-                    <p>Get help within 24 hours from our expert team.</p>
-                </div>
-                <div class="benefit-item">
-                    <h4>📁 All Presets</h4>
-                    <p>Optimized settings for different currency pairs and risk levels.</p>
-                </div>
-                <div class="benefit-item">
-                    <h4>🔓 VIP Access</h4>
-                    <p>Exclusive VIP Telegram group with trade signals and analysis.</p>
-                </div>
-                <div class="benefit-item">
-                    <h4>🎁 Exclusive Bonuses</h4>
-                    <p>Bonus tools and indicators to supercharge your trading.</p>
-                </div>
-            </div>
+    <section class="offer" id="offer">
+      <div class="inner">
+        <div class="label">Limited Offer</div>
+        <h2 class="title">Get Lifetime Access Today</h2>
+        <p class="desc">One checkout. Lifetime access to the EA package, presets and VIP resources.</p>
+        <div class="price-card">
+          <div class="price-title">Lifetime Plan</div>
+          <p style="color:var(--muted);line-height:1.7">Recommended for serious users who want full access without monthly payments.</p>
+          <div class="price">$300 <small>lifetime access</small></div>
+          <div class="included">
+            <div>Secret EA robot files</div>
+            <div>MT4 & MT5 support</div>
+            <div>VIP preset access</div>
+            <div>Signal room access</div>
+            <div>Setup guidance</div>
+            <div>Future updates included</div>
+          </div>
+          <a class="btn-main" href="https://go.centerpag.com/PPU38CQCA1R" target="_blank" rel="noopener" onclick="fbq('track','InitiateCheckout')">✅ Go To Secure Checkout</a>
+          <p class="safe">After payment, send your payment proof to the support team on Telegram to receive the EA, presets and VIP access.</p>
         </div>
+      </div>
     </section>
 
-    <!-- Pricing -->
-    <section class="pricing">
-        <div class="container">
-            <h2>💰 Invest Once, Trade Forever</h2>
-            <p class="subtitle">No recurring fees. No monthly subscriptions.</p>
-            <div class="pricing-card">
-                <div class="price">$300</div>
-                <div class="period">Lifetime Access</div>
-                <ul>
-                    <li>Lifetime Updates</li>
-                    <li>Priority Support</li>
-                    <li>All Presets Included</li>
-                    <li>VIP Access</li>
-                    <li>Exclusive Bonuses</li>
-                </ul>
-                <a href="https://go.centerpag.com/PPU38CQCA1R" class="cta-btn">Buy Now – Only $300 🔥</a>
-                <div class="payment-methods">
-                    <span style="color:#a0a8b8; font-size:0.9rem;"><strong>PerfectPay:</strong> Credit Card, Pix, Bank Transfer</span>
-                </div>
-            </div>
+    <section>
+      <div class="inner">
+        <div class="label">How It Works</div>
+        <h2 class="title">Simple Access Process</h2>
+        <div class="steps">
+          <div class="step"><h3>Complete Checkout</h3><p>Click the checkout button and complete your payment securely through Centerpag.</p></div>
+          <div class="step"><h3>Send Your Payment Proof</h3><p>After payment, contact support and send the payment screenshot or confirmation.</p></div>
+          <div class="step"><h3>Receive Your Access</h3><p>You will receive the EA files, presets, instructions and VIP resources through Telegram.</p></div>
         </div>
+      </div>
     </section>
 
-    <!-- Bonuses -->
-    <section class="bonuses">
-        <div class="container">
-            <h2>🎁 Exclusive Bonuses (Limited Time)</h2>
-            <div class="bonus-grid">
-                <div class="bonus-item">
-                    <div class="icon">📡</div>
-                    <h4>Signals Room</h4>
-                    <p>Real-time trade signals from professional analysts.</p>
-                </div>
-                <div class="bonus-item">
-                    <div class="icon">🔄</div>
-                    <h4>Copy Trade</h4>
-                    <p>Automatically copy trades from top-performing accounts.</p>
-                </div>
-                <div class="bonus-item">
-                    <div class="icon">🎧</div>
-                    <h4>VIP Support</h4>
-                    <p>Dedicated support line for premium members.</p>
-                </div>
-            </div>
+    <section>
+      <div class="inner">
+        <div class="label">FAQ</div>
+        <h2 class="title">Common Questions</h2>
+        <div class="faq">
+          <details open><summary>Does it work on MT4 and MT5?</summary><p>Yes. The package is designed to support MetaTrader 4 and MetaTrader 5 depending on the EA version and files provided.</p></details>
+          <details><summary>Do I receive presets?</summary><p>Yes. The lifetime package includes access to VIP presets and setup guidance.</p></details>
+          <details><summary>Is this financial advice?</summary><p>No. This is trading software and educational/support material. Trading involves risk and results are not guaranteed.</p></details>
+          <details><summary>How do I get access after buying?</summary><p>Complete the checkout, then send your payment proof to support on Telegram so your access can be released.</p></details>
         </div>
+        <div class="disclaimer">Risk Disclaimer: Forex, CFDs and crypto trading involve significant risk and may not be suitable for all investors. Past performance, backtests, screenshots or examples do not guarantee future results. Use proper risk management and only trade with capital you can afford to risk.</div>
+      </div>
     </section>
+  </main>
 
-    <!-- Social Proof -->
-    <section class="social-proof">
-        <div class="container">
-            <h2>💬 Trusted by Thousands</h2>
-            <div class="testimonial">
-                <p>"This robot completely changed my trading. I went from losing to consistent profits every month. Highly recommended!"</p>
-                <div class="author">– Michael T., Verified Buyer</div>
-            </div>
-            <div class="testimonial">
-                <p>"The support is amazing and the robot works like a charm. Already made back my investment multiple times."</p>
-                <div class="author">– Sarah L., Pro Trader</div>
-            </div>
-            <div class="stats-numbers">
-                <div>
-                    <div class="stat-number">10,000+</div>
-                    <div class="stat-label">Traders Worldwide</div>
-                </div>
-                <div>
-                    <div class="stat-number">4.8/5</div>
-                    <div class="stat-label">Average Rating</div>
-                </div>
-                <div>
-                    <div class="stat-number">97%</div>
-                    <div class="stat-label">Success Rate</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq">
-        <div class="container">
-            <h2>❓ Frequently Asked Questions</h2>
-            <div class="faq-item active">
-                <h4 onclick="this.parentElement.classList.toggle('active')">Is this really a one-time payment?</h4>
-                <p>Yes! You pay $300 once and get lifetime access, updates, and support. No hidden fees or subscriptions.</p>
-            </div>
-            <div class="faq-item">
-                <h4 onclick="this.parentElement.classList.toggle('active')">Does it work with my broker?</h4>
-                <p>It works with any broker that supports MT4 or MT5. Just install and configure.</p>
-            </div>
-            <div class="faq-item">
-                <h4 onclick="this.parentElement.classList.toggle('active')">What if I'm not satisfied?</h4>
-                <p>We offer a 30-day money-back guarantee. No questions asked.</p>
-            </div>
-            <div class="faq-item">
-                <h4 onclick="this.parentElement.classList.toggle('active')">How long does it take to set up?</h4>
-                <p>Setup takes less than 10 minutes. Detailed video guide included.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <h2>🚀 Join 10,000+ Successful Traders</h2>
-            <p>Start automating your Forex trading today. Limited spots available at this price!</p>
-            <a href="https://go.centerpag.com/PPU38CQCA1R" class="cta-btn">Get Lifetime Access – $300 ⏰</a>
-        </div>
-    </section>
-
-    <!-- Risk Disclaimer -->
-    <section class="disclaimer">
-        <div class="container">
-            <p><strong>⚠️ Risk Disclaimer:</strong> Trading Forex involves substantial risk of loss. Past performance does not guarantee future results. This robot is a tool, not a guarantee of profits. Only invest what you can afford to lose.</p>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="social-links">
-                <a href="#">Facebook</a>
-                <a href="#">Twitter</a>
-                <a href="#">Telegram</a>
-                <a href="#">YouTube</a>
-            </div>
-            <p style="margin-top:20px; color:#6a7280;">&copy; 2025 Forex Robot. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        // Simple FAQ toggle
-        document.querySelectorAll('.faq-item h4').forEach(item => {
-            item.addEventListener('click', function() {
-                this.parentElement.classList.toggle('active');
-            });
-        });
-    </script>
+  <footer>
+    © 2026 Secret EA. All rights reserved.<br />
+    Automated trading software for educational and informational purposes only.
+  </footer>
 </body>
 </html>
-
-
