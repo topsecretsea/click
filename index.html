@@ -1,169 +1,312 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Access Telegram</title>
-  <meta name="description" content="Access the Telegram channel. Click to join." />
-  <meta name="robots" content="noindex,nofollow" />
-
-  <!-- Meta Pixel (replace PIXEL_ID) -->
-  <script>
-    (function(f,b,e,v,n,t,s){
-      if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)
-    })(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2574683239598570');
-    fbq('track', 'PageView');
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-         src="https://www.facebook.com/tr?id=PIXEL_ID&ev=PageView&noscript=1"/>
-  </noscript>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '863937386658423');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=863937386658423&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-  <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1486916789630516');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1486916789630516&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forex Robot - Automate Your Trading 24/7</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root { --w: 720px; }
-    body{
-      margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background:#0b0f19; color:#eaf0ff; line-height:1.45;
-      display:flex; min-height:100vh; align-items:center; justify-content:center;
-      padding:24px;
-    }
-    .card{
-      width:100%; max-width:var(--w);
-      background:rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.12);
-      border-radius:18px; padding:28px;
-      box-shadow: 0 12px 40px rgba(0,0,0,.35);
-    }
-    h1{ margin:0 0 10px; font-size:28px; letter-spacing:-.2px; }
-    p{ margin:0 0 14px; color:rgba(234,240,255,.86); }
-    ul{ margin:0 0 18px 18px; color:rgba(234,240,255,.86); }
-    .cta{
-      display:flex; gap:12px; flex-wrap:wrap; margin-top:18px;
-    }
-    a.btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:14px 18px; border-radius:14px; text-decoration:none; font-weight:700;
-      border:1px solid rgba(255,255,255,.16);
-      background: rgba(255,255,255,.10);
-      color:#eaf0ff;
-      min-width: 220px;
-    }
-    a.btn.primary{
-      background: rgba(0, 177, 106, .18);
-      border-color: rgba(0, 177, 106, .35);
-    }
-    .mini{
-      margin-top:14px; font-size:12px; color:rgba(234,240,255,.62);
-    }
-    .badge{
-      display:inline-block; font-size:12px; padding:6px 10px; border-radius:999px;
-      border:1px solid rgba(255,255,255,.16); background:rgba(255,255,255,.06);
-      margin-bottom:12px;
-    }
-    .divider{
-      height:1px; background:rgba(255,255,255,.10); margin:18px 0;
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; background: #0b0e1a; color: #e0e6ed; line-height: 1.6; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    /* Hero */
+    .hero { padding: 80px 0 60px; text-align: center; background: linear-gradient(135deg, #0b0e1a 0%, #1a1f33 100%); }
+    .hero h1 { font-size: 3rem; font-weight: 800; background: linear-gradient(90deg, #00d4ff, #00ff88); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 20px; }
+    .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; color: #a0a8b8; }
+    .cta-btn { display: inline-block; background: linear-gradient(90deg, #00d4ff, #00ff88); color: #0b0e1a; padding: 15px 40px; border-radius: 50px; font-weight: 700; font-size: 1.1rem; text-decoration: none; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 0 20px rgba(0,212,255,0.4); }
+    .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 0 30px rgba(0,212,255,0.6); }
+    .stats { display: flex; justify-content: center; gap: 40px; margin-top: 40px; flex-wrap: wrap; }
+    .stat-item { text-align: center; }
+    .stat-item span { display: block; font-size: 1rem; color: #00d4ff; font-weight: 600; }
+    .stat-item .icon { font-size: 2rem; }
+    /* Features */
+    .features { padding: 60px 0; background: #121726; }
+    .features h2 { text-align: center; font-size: 2.2rem; font-weight: 700; margin-bottom: 50px; }
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+    .feature-card { background: #1a2035; border-radius: 15px; padding: 30px; text-align: center; transition: transform 0.3s; border: 1px solid #2a3050; }
+    .feature-card:hover { transform: translateY(-5px); border-color: #00d4ff; }
+    .feature-card .icon { font-size: 3rem; margin-bottom: 15px; }
+    .feature-card h3 { font-size: 1.3rem; font-weight: 600; margin-bottom: 10px; }
+    .feature-card p { font-size: 0.95rem; color: #a0a8b8; }
+    /* Benefits */
+    .benefits { padding: 60px 0; background: #0b0e1a; }
+    .benefits h2 { text-align: center; font-size: 2.2rem; font-weight: 700; margin-bottom: 50px; }
+    .benefits-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 900px; margin: 0 auto; }
+    .benefit-item { background: #1a2035; padding: 20px; border-radius: 10px; border-left: 4px solid #00d4ff; }
+    .benefit-item h4 { font-weight: 600; margin-bottom: 5px; }
+    .benefit-item p { color: #a0a8b8; font-size: 0.9rem; }
+    /* Pricing */
+    .pricing { padding: 60px 0; background: #121726; text-align: center; }
+    .pricing h2 { font-size: 2.2rem; font-weight: 700; margin-bottom: 10px; }
+    .pricing .subtitle { color: #a0a8b8; margin-bottom: 40px; }
+    .pricing-card { background: linear-gradient(135deg, #1a2035, #1f2a4a); border-radius: 20px; padding: 40px; max-width: 400px; margin: 0 auto; border: 2px solid #00d4ff; position: relative; }
+    .pricing-card .price { font-size: 3rem; font-weight: 800; color: #00ff88; }
+    .pricing-card .period { font-size: 1.2rem; color: #a0a8b8; }
+    .pricing-card ul { list-style: none; margin: 30px 0; text-align: left; }
+    .pricing-card ul li { padding: 8px 0; font-size: 1rem; }
+    .pricing-card ul li::before { content: '✔️ '; color: #00ff88; }
+    .pricing-card .cta-btn { margin-top: 20px; }
+    .payment-methods { display: flex; justify-content: center; gap: 30px; margin-top: 30px; flex-wrap: wrap; }
+    .payment-methods img { height: 40px; filter: brightness(0) invert(1); }
+    /* Bonuses */
+    .bonuses { padding: 60px 0; background: #0b0e1a; text-align: center; }
+    .bonuses h2 { font-size: 2.2rem; font-weight: 700; margin-bottom: 40px; }
+    .bonus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; max-width: 800px; margin: 0 auto; }
+    .bonus-item { background: #1a2035; padding: 30px; border-radius: 15px; border: 1px solid #2a3050; }
+    .bonus-item .icon { font-size: 2.5rem; margin-bottom: 10px; }
+    .bonus-item h4 { font-weight: 600; }
+    /* Social Proof */
+    .social-proof { padding: 60px 0; background: #121726; text-align: center; }
+    .social-proof h2 { font-size: 2.2rem; font-weight: 700; margin-bottom: 40px; }
+    .testimonial { max-width: 600px; margin: 0 auto 30px; background: #1a2035; padding: 30px; border-radius: 15px; }
+    .testimonial p { font-style: italic; color: #c0c8d8; }
+    .testimonial .author { margin-top: 15px; font-weight: 600; color: #00d4ff; }
+    .stats-numbers { display: flex; justify-content: center; gap: 50px; margin-top: 40px; flex-wrap: wrap; }
+    .stat-number { font-size: 2rem; font-weight: 800; color: #00ff88; }
+    .stat-label { color: #a0a8b8; }
+    /* FAQ */
+    .faq { padding: 60px 0; background: #0b0e1a; }
+    .faq h2 { text-align: center; font-size: 2.2rem; font-weight: 700; margin-bottom: 40px; }
+    .faq-item { background: #1a2035; margin-bottom: 15px; border-radius: 10px; padding: 20px; }
+    .faq-item h4 { font-weight: 600; cursor: pointer; }
+    .faq-item p { margin-top: 10px; color: #a0a8b8; display: none; }
+    .faq-item.active p { display: block; }
+    /* Final CTA */
+    .final-cta { padding: 80px 0; background: linear-gradient(135deg, #121726, #1a2035); text-align: center; }
+    .final-cta h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 20px; }
+    .final-cta p { font-size: 1.2rem; color: #a0a8b8; margin-bottom: 30px; }
+    .final-cta .cta-btn { font-size: 1.3rem; padding: 18px 50px; }
+    /* Risk Disclaimer */
+    .disclaimer { padding: 30px 0; background: #0b0e1a; text-align: center; font-size: 0.8rem; color: #6a7280; }
+    .disclaimer p { max-width: 800px; margin: 0 auto; }
+    /* Footer */
+    footer { padding: 40px 0; background: #121726; text-align: center; }
+    footer .social-links a { color: #a0a8b8; margin: 0 15px; text-decoration: none; font-size: 1.2rem; transition: color 0.3s; }
+    footer .social-links a:hover { color: #00d4ff; }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .stats { gap: 20px; }
+      .pricing-card { margin: 0 20px; }
     }
   </style>
 </head>
-
 <body>
-  <main class="card">
-    <div class="badge">Secure access • 1-click join</div>
-    <h1>Ready to access the Telegram channel?</h1>
-    <p>Click the button below to join. This step helps avoid wrong links and keeps access organized.</p>
-
-    <ul>
-      <li>Instant access after clicking</li>
-      <li>Works on mobile and desktop</li>
-      <li>No automatic redirects</li>
-    </ul>
-
-    <div class="divider"></div>
-
-    <p><strong>Important:</strong> Make sure Telegram is installed, then tap “Join”.</p>
-
-    <div class="cta">
-      <a class="btn primary" id="joinBtn" href="https://t.me/+dgULAfsVWPhmMDQx" rel="noopener">
-        Join on Telegram
-      </a>
-      <a class="btn" id="helpBtn" href="https://telegram.org/" target="_blank" rel="noopener">
-        Get Telegram
-      </a>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>🤖 Automate Your Forex Trading 24/7</h1>
+      <p>Trade with precision using our advanced Expert Advisor. No emotions, no stress – just consistent profits.</p>
+      <a href="#" class="cta-btn">Get Lifetime Access Now 🔥</a>
+      <div class="stats">
+        <div class="stat-item"><span class="icon">💻</span><span>MT4 Compatible</span></div>
+        <div class="stat-item"><span class="icon">📱</span><span>MT5 Compatible</span></div>
+        <div class="stat-item"><span class="icon">⏰</span><span>24/7 Automated</span></div>
+        <div class="stat-item"><span class="icon">🔒</span><span>Lifetime Access</span></div>
+      </div>
     </div>
+  </section>
 
-    <p class="mini" id="status"></p>
+  <!-- Why Choose Us -->
+  <section class="features">
+    <div class="container">
+      <h2>Why Choose Our Robot?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="icon">⚙️</div>
+          <h3>100% Automated</h3>
+          <p>Set it and forget it. Our EA trades for you around the clock.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🛡️</div>
+          <h3>Risk Control</h3>
+          <p>Advanced money management and stop-loss protection built-in.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">📊</div>
+          <h3>Verified Results</h3>
+          <p>Backtested and live-verified with consistent monthly returns.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🔄</div>
+          <h3>MT4 & MT5</h3>
+          <p>Works seamlessly on both MetaTrader 4 and MetaTrader 5.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <p class="mini">
-      By proceeding, you confirm you want to open Telegram.
-    </p>
-  </main>
+  <!-- What You Get -->
+  <section class="benefits">
+    <div class="container">
+      <h2>📦 What You Get</h2>
+      <div class="benefits-list">
+        <div class="benefit-item">
+          <h4>🚀 Lifetime Access</h4>
+          <p>One payment, forever access. No subscriptions, no hidden fees.</p>
+        </div>
+        <div class="benefit-item">
+          <h4>🔄 Lifetime Updates</h4>
+          <p>Free updates for life – we constantly improve the algorithm.</p>
+        </div>
+        <div class="benefit-item">
+          <h4>🎧 Priority Support</h4>
+          <p>Get help within 24 hours from our expert team.</p>
+        </div>
+        <div class="benefit-item">
+          <h4>📁 All Presets</h4>
+          <p>Optimized settings for different currency pairs and risk levels.</p>
+        </div>
+        <div class="benefit-item">
+          <h4>🔓 VIP Access</h4>
+          <p>Exclusive VIP Telegram group with trade signals and analysis.</p>
+        </div>
+        <div class="benefit-item">
+          <h4>🎁 Exclusive Bonuses</h4>
+          <p>Bonus tools and indicators to supercharge your trading.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="pricing">
+    <div class="container">
+      <h2>💰 Invest Once, Trade Forever</h2>
+      <p class="subtitle">No recurring fees. No monthly subscriptions.</p>
+      <div class="pricing-card">
+        <div class="price">$300</div>
+        <div class="period">Lifetime Access</div>
+        <ul>
+          <li>Lifetime Updates</li>
+          <li>Priority Support</li>
+          <li>All Presets Included</li>
+          <li>VIP Access</li>
+          <li>Exclusive Bonuses</li>
+        </ul>
+        <a href="#" class="cta-btn">Buy Now – Only $300 🔥</a>
+        <div class="payment-methods">
+          <img src="https://nowpayments.io/images/logo.svg" alt="NOWPayments" style="height:30px; filter: brightness(0) invert(1);">
+          <span style="color:#a0a8b8; font-size:0.9rem;">USDT, USDC, BTC</span>
+          <span style="color:#a0a8b8;">|</span>
+          <img src="https://stripe.com/img/v3/home/twitter.png" alt="Stripe" style="height:30px; filter: brightness(0) invert(1);">
+          <span style="color:#a0a8b8; font-size:0.9rem;">Credit/Debit Card</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bonuses -->
+  <section class="bonuses">
+    <div class="container">
+      <h2>🎁 Exclusive Bonuses (Limited Time)</h2>
+      <div class="bonus-grid">
+        <div class="bonus-item">
+          <div class="icon">📡</div>
+          <h4>Signals Room</h4>
+          <p>Real-time trade signals from professional analysts.</p>
+        </div>
+        <div class="bonus-item">
+          <div class="icon">🔄</div>
+          <h4>Copy Trade</h4>
+          <p>Automatically copy trades from top-performing accounts.</p>
+        </div>
+        <div class="bonus-item">
+          <div class="icon">🎧</div>
+          <h4>VIP Support</h4>
+          <p>Dedicated support line for premium members.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof -->
+  <section class="social-proof">
+    <div class="container">
+      <h2>💬 Trusted by Thousands</h2>
+      <div class="testimonial">
+        <p>"This robot completely changed my trading. I went from losing to consistent profits every month. Highly recommended!"</p>
+        <div class="author">– Michael T., Verified Buyer</div>
+      </div>
+      <div class="testimonial">
+        <p>"The support is amazing and the robot works like a charm. Already made back my investment multiple times."</p>
+        <div class="author">– Sarah L., Pro Trader</div>
+      </div>
+      <div class="stats-numbers">
+        <div>
+          <div class="stat-number">10,000+</div>
+          <div class="stat-label">Traders Worldwide</div>
+        </div>
+        <div>
+          <div class="stat-number">4.8/5</div>
+          <div class="stat-label">Average Rating</div>
+        </div>
+        <div>
+          <div class="stat-number">97%</div>
+          <div class="stat-label">Success Rate</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container">
+      <h2>❓ Frequently Asked Questions</h2>
+      <div class="faq-item active">
+        <h4 onclick="this.parentElement.classList.toggle('active')">Is this really a one-time payment?</h4>
+        <p>Yes! You pay $300 once and get lifetime access, updates, and support. No hidden fees or subscriptions.</p>
+      </div>
+      <div class="faq-item">
+        <h4 onclick="this.parentElement.classList.toggle('active')">Does it work with my broker?</h4>
+        <p>It works with any broker that supports MT4 or MT5. Just install and configure.</p>
+      </div>
+      <div class="faq-item">
+        <h4 onclick="this.parentElement.classList.toggle('active')">What if I'm not satisfied?</h4>
+        <p>We offer a 30-day money-back guarantee. No questions asked.</p>
+      </div>
+      <div class="faq-item">
+        <h4 onclick="this.parentElement.classList.toggle('active')">How long does it take to set up?</h4>
+        <p>Setup takes less than 10 minutes. Detailed video guide included.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>🚀 Join 10,000+ Successful Traders</h2>
+      <p>Start automating your Forex trading today. Limited spots available at this price!</p>
+      <a href="#" class="cta-btn">Get Lifetime Access – $300 ⏰</a>
+    </div>
+  </section>
+
+  <!-- Risk Disclaimer -->
+  <section class="disclaimer">
+    <div class="container">
+      <p><strong>⚠️ Risk Disclaimer:</strong> Trading Forex involves substantial risk of loss. Past performance does not guarantee future results. This robot is a tool, not a guarantee of profits. Only invest what you can afford to lose.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="social-links">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Telegram</a>
+        <a href="#">YouTube</a>
+      </div>
+      <p style="margin-top:20px; color:#6a7280;">&copy; 2025 Forex Robot. All rights reserved.</p>
+    </div>
+  </footer>
 
   <script>
-    // Track a "content view" after load
-    window.addEventListener('load', function () {
-      try { fbq('track', 'ViewContent'); } catch(e){}
-    });
-
-    const joinBtn = document.getElementById('joinBtn');
-    const statusEl = document.getElementById('status');
-
-    function safeFbqCustom(eventName, params) {
-      try { fbq('trackCustom', eventName, params || {}); } catch(e) {}
-    }
-
-    joinBtn.addEventListener('click', function () {
-      // Custom event for optimization
-      safeFbqCustom('telegram_entry', {
-        page: 'click',
-        source: 'button'
+    // Simple FAQ toggle
+    document.querySelectorAll('.faq-item h4').forEach(item => {
+      item.addEventListener('click', function() {
+        this.parentElement.classList.toggle('active');
       });
-
-      // UX feedback (also reduces “instant bounce” look)
-      statusEl.textContent = 'Opening Telegram…';
-
-      // Give the pixel a short moment; do NOT auto-redirect
-      // (the href still opens normally)
-      const t0 = Date.now();
-      while (Date.now() - t0 < 80) { /* tiny delay */ }
     });
   </script>
 </body>
